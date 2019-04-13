@@ -17,15 +17,13 @@ export class AppComponent  {
 
   @Select(state =>{
     try {
-    console.log(state)
-
     return state.count.number.value
     }catch (err){
-      console.log(err)
+      console.log('error', err)
       throw err;
     }
   
-  }) count$: Observable<number>;  // here the selector updates only till it gets state.count not undefined 
+  }) count$: Observable<number>;  // here the selector emits values only till it gets state.count not undefined 
 
   constructor(private store: Store) {}
 

@@ -33,7 +33,5 @@ export class CountState {
     setState({number : {
       value : Math.random() * 10
     }});
-
-    console.log(state);
   }
 }
